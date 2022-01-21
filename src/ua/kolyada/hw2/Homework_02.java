@@ -1,4 +1,4 @@
-package ua.kolyada.hw;
+package ua.kolyada.hw2;
 
 import java.util.Scanner;
 

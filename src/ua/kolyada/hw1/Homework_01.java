@@ -1,4 +1,4 @@
-package ua.kolyada.hw;
+package ua.kolyada.hw1;
 
 public class Homework_01 {
     public static void main(String[] args) {
