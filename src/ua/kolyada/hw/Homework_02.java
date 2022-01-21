@@ -1,3 +1,5 @@
+package ua.kolyada.hw;
+
 import java.util.Scanner;
 
 public class Homework_02 {
