@@ -1,5 +1,3 @@
-package ua.kolyada.hw2;
-
 import java.util.Scanner;
 
 public class Homework_02 {
@@ -52,12 +50,14 @@ public class Homework_02 {
         System.out.println("Enter third Number ");
         Scanner inputC = new Scanner(System.in);
         c = inputC.nextDouble();
-        double absA = Math.abs(a);
-        double absB = Math.abs(b);
-        double absC = Math.abs(c);
-        System.out.println("The smallest Number is " + ((absA<absB) ? ((absA<absC) ? absA : absC) : ((absB<absC) ? absB : absC)));
 
-        System.out.println("And again, but without ternary operator");
+        double absA = (a < 0) ? -a : a;
+        double absB = (b < 0) ? -b : b;
+        double absC = (c < 0) ? -c : c;
+
+        System.out.println("The smallest Number is " + ((absA < absB) ? ((absA < absC) ? absA : absC) : ((absB < absC) ? absB : absC)));
+
+        System.out.println("Without ternary operator, more options");
         if (Math.abs(a) < Math.abs(b) && Math.abs(a) < Math.abs(c)) {
             System.out.println("The smallest Number is  " + a);
         } else if (Math.abs(b) < Math.abs(a) && Math.abs(b) < Math.abs(c)) {
