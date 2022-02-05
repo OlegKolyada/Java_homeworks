@@ -4,7 +4,7 @@ public class Task2 {
     public static void main(String[] args) {
         int[][] twoDisArray = new int[5][5];
         fillArray(twoDisArray);
-        System.out.println(isIncrement(twoDisArray) +"\t");
+        System.out.println("Array's incremention is " +isIncrement(twoDisArray));
     }
 
     public static int[][] fillArray(int[][] twoDisArray) {

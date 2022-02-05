@@ -1,5 +1,7 @@
 package ua.kolyada.hw4;
 
+import java.util.Arrays;
+
 public class Task2 {
     public static void main(String[] args) {
         int[] randomArray = new int[1000];
@@ -12,7 +14,7 @@ public class Task2 {
     private static int primeNumbers(int[] randomArray) {
         int result = 0;
         for (int a : randomArray) {
-            boolean b = a > 0;
+            boolean b = a > 1;
             for (int j = 2; j < a; j++) {
                 if (a % j == 0) {
                     b = false;

@@ -6,7 +6,8 @@ public class Task1 {
     public static void main(String[] args) {
         int[][] twoDisArray = new int[5][5];
         fillArray(twoDisArray);
-        System.out.println(Arrays.deepToString(twoDisArray));
+        System.out.printf("%n" +Arrays.deepToString(twoDisArray));
+        System.out.println();
     }
 
     public static int[][] fillArray(int[][] twoDisArray) {
