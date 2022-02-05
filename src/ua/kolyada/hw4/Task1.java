@@ -12,25 +12,25 @@ public class Task1 {
     }
 
     private static double arithmeticAverageOfArray(int[] randomArray) {
-        double average = 0;
+        double averageArith = 0;
         if (randomArray.length > 0) {
             double sum = 0;
-            for (int b = 0; b < randomArray.length; b++) {
-                sum += randomArray[b];
+            for (int i : randomArray) {
+                sum += randomArray[i];
             }
-            average = sum / randomArray.length;
+            averageArith = sum / randomArray.length;
         }
-        return average;
+        return averageArith;
     }
     private static double geometricAverageOfArray(int[] randomArray) {
-        double average = 0;
+        double averageGeom = 0;
+        double j = 1.0D;
         if (randomArray.length > 0) {
-            double sum = 0;
-            for (int b = 0; b < randomArray.length; b++) {
-                sum += randomArray[b];
+            for (int i : randomArray) {
+                j *= randomArray[i];
             }
-            average = Math.sqrt(sum);
+            averageGeom = Math.pow(j, 1.0D / (double) randomArray.length);
         }
-        return average;
+        return averageGeom;
     }
 }
