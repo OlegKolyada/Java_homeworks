@@ -14,8 +14,7 @@ public class Task1 {
         int k = 0;
         for (int i = 0; i < twoDisArray.length; i++) {
             for (int j = 0; j < twoDisArray[i].length; j++) {
-                twoDisArray[i][j] = k + 1;
-                k++;
+                twoDisArray[i][j] = ++k;
             }
         }
         k = 1;

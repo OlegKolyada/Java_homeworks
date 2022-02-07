@@ -1,44 +1,29 @@
 package ua.kolyada.hw5;
 
+import java.util.Arrays;
+
 public class Task2 {
     public static void main(String[] args) {
-        int[][] twoDisArray = new int[5][5];
-        fillArray(twoDisArray);
-        System.out.println("Array's incremention is " +isIncrement(twoDisArray));
+        int[] randomArray = new int[10];
+        fillArray(randomArray);
+        System.out.println(Arrays.toString(fillArray(randomArray)));
+        System.out.println("Array's incremention is " +isIncrement(randomArray));
     }
 
-    public static int[][] fillArray(int[][] twoDisArray) {
-        int k = 0;
-        for (int i = 0; i < twoDisArray.length; i++) {
-            for (int j = 0; j < twoDisArray[i].length; j++) {
-                twoDisArray[i][j] = k + 1;
-                k++;
-            }
+    public static int[] fillArray(int[] randomArray) {
+        for (int a = 0; a < randomArray.length; a++) {
+            randomArray[a] = (int) (Math.random() * 10) + 1;
         }
-        k = 1;
-        for (int i = 0; i < twoDisArray.length; i++) {
-            for (int j = 0; j < twoDisArray[i].length; j++) {
-                if (i % 2 != 0)
-                    twoDisArray[i][j] = k * (-1);
-                k++;
-                System.out.print("\t" + twoDisArray[i][j] + "\t");
-            }
-            {
-                System.out.println(" ");
-            }
-        }
-        return twoDisArray;
+        return randomArray;
     }
 
-    public static boolean isIncrement(int[][] twoDisArray) {
+    public static boolean isIncrement(int[] randomArray) {
         boolean increment = true;
-        for (int i = 2; i < twoDisArray.length; i++) {
-            for (int j = 2; j < twoDisArray.length; j++) {
-                if (twoDisArray[i - 1][j - 1] > twoDisArray[i][j]) {
+        for (int i = 1; i < randomArray.length; i++) {
+                if (randomArray[i - 1] > randomArray[i]) {
                     return false;
                 }
             }
-        }
         return increment;
     }
 }
