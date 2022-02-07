@@ -1,7 +1,5 @@
 package ua.kolyada.hw5;
 
-import java.util.Arrays;
-
 public class Task2 {
     public static void main(String[] args) {
         int[] randomArray = new int[10];
@@ -19,7 +17,7 @@ public class Task2 {
     public static boolean isIncrement(int[] randomArray) {
         boolean increment = true;
         for (int i = 1; i < randomArray.length; i++) {
-                if (randomArray[i - 1] > randomArray[i]) {
+                if (randomArray[i - 1] < randomArray[i]) {
                     return false;
                 }
             }
