@@ -6,7 +6,6 @@ public class Task2 {
     public static void main(String[] args) {
         int[] randomArray = new int[10];
         fillArray(randomArray);
-        System.out.println(Arrays.toString(fillArray(randomArray)));
         System.out.println("Array's incremention is " +isIncrement(randomArray));
     }
 
