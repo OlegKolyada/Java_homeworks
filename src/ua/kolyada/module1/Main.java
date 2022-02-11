@@ -21,6 +21,7 @@ public class Main {
         fillArray(randomArray);
         System.out.println(Arrays.toString(randomArray));
         mkChoice(randomArray);
+        System.out.println("Changed Array is " +Arrays.toString(changeArray(randomArray)));
     }
 
     public static int[] fillArray(int[] randomArray) {
@@ -94,10 +95,10 @@ public class Main {
         return randomArray;
     }
 
-    public void changeArray(int[] randomArray) {
+    public static int[] changeArray(int[] randomArray) {
         for (int i = 2; i < randomArray.length; i += 3) {
             randomArray[i] = randomArray[i] * randomArray[i] * randomArray[i];
         }
-        System.out.println("Changed Array is " +Arrays.toString(randomArray));
+        return randomArray;
     }
 }
